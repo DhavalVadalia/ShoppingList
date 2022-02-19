@@ -27,9 +27,10 @@
             <c:forEach items="${items}" var="item">
                 <p> 
                    
+                  <c:if test="${not empty items}">
                     <input type="radio" name="item" value="${item}"/>
                     ${item}
-                 
+                    </c:if>
                 </p>
             </c:forEach>
             <c:if test="${items.size() != 0}">
